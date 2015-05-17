@@ -27,8 +27,15 @@ public class Order {
 	@OneToMany(mappedBy="order")
 	private List<OrderLine> lines = new ArrayList<>();
 	
+	public Order() {
+		
+	}
 	
-	
+	public Order(Long id) {
+		super();
+		this.id = id;
+	}
+
 	public Long getId() {
 		return id;
 	}
